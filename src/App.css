@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.calculator-container {
+  width: 310px;
+  border: 2px solid black;
+  margin: 10px auto;
+  border-radius: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.calculator-container .screen-container {
+  width: 100%;
+  text-align: right;
+  border-bottom: 2px solid black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.calculator-container .screen-container h5,
+.calculator-container .screen-container h1 {
+  padding-right: 10px;
+}
+
+.calculator-container .screen-container h1 {
+  color: orange;
+}
+
+.calculator-container .buttons-container {
+  width: 100%;
+}
+
+.calculator-container .buttons-container .btn-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
-.App-link {
-  color: #61dafb;
+.calculator-container .buttons-container .btn-group button {
+  width: 100%;
+  height: 50px;
+  margin: 3px;
+  border-radius: 5px;
+  font-size: 1.2em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (max-width: 320px) {
+  .calculator-container {
+    margin: 5px;
   }
 }
+/*# sourceMappingURL=App.css.map */

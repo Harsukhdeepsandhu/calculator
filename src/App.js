@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Input from './components/Input';
+import Screen from './components/Screen';
 
 function App() {
+  const [userInput, setUserInput] = useState([]);
+  const [answer, setAnswer] = useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="calculator-container">
+      <Screen
+        userInput={userInput}
+        answer={answer}
+      />
+      <Input
+        userInput={userInput}
+        setUserInput={setUserInput}
+        answer={answer}
+        setAnswer={setAnswer}
+      />
     </div>
   );
 }
